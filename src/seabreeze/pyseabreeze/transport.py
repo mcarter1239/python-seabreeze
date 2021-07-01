@@ -11,6 +11,7 @@ from functools import partial
 
 import usb.core
 import usb.util
+import usb.backend.libusb1
 
 try:
     from functools import partialmethod
@@ -269,6 +270,7 @@ class USBTransport(TransportInterface):
         devices : USBTransportHandle
             unique pyusb devices for each available spectrometer
         """
+        backend_libusb1 = usb.backend.libusb1.get_backend(find_library=lambda x: "/lib/libusb-1.0.so")
         # check if a specific pyusb backend is requested
         _pyusb_backend = kwargs.get("_pyusb_backend", None)
         # get all matching devices
@@ -278,7 +280,7 @@ class USBTransport(TransportInterface):
                 custom_match=lambda dev: (
                     dev.idVendor == cls.vendor_id and dev.idProduct in cls.product_ids
                 ),
-                backend=get_pyusb_backend_from_name(name=_pyusb_backend),
+                backend=backend_libusb1,
             )
         except usb.core.NoBackendError:
             raise RuntimeError("No pyusb backend found")
