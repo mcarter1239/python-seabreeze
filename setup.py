@@ -154,6 +154,7 @@ setup(
     author_email="andreas@poehlmann.io (mod: mtcarte4@ncsu.edu)",
     url="https://github.com/mcarter1239/python-seabreeze",
     license="MIT",
+    version="0.1.0",
     use_scm_version={
         "write_to": "src/seabreeze/_version.py",
         "write_to_template": '__version__ = "{version}"',
