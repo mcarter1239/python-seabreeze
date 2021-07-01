@@ -149,10 +149,10 @@ if WARN_NO_CYTHON and extensions:
     )
 
 setup(
-    name="seabreeze",
-    author="Andreas Poehlmann",
-    author_email="andreas@poehlmann.io",
-    url="https://github.com/ap--/python-seabreeze",
+    name="seabreeze-opentrons",
+    author="Andreas Poehlmann (modified by Michael Carter)",
+    author_email="andreas@poehlmann.io (mod: mtcarte4@ncsu.edu)",
+    url="https://github.com/mcarter1239/python-seabreeze",
     license="MIT",
     use_scm_version={
         "write_to": "src/seabreeze/_version.py",
@@ -195,6 +195,7 @@ setup(
         "Python interface module for Ocean Optics spectrometers. "
         "This software is not associated with Ocean Optics. "
         "Use it at your own risk."
+        "Modified by Michael Carter for use with Amassian Research Group Opentrons."
     ),
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
