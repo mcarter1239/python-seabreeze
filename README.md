@@ -1,3 +1,11 @@
+# This python module has been modified to work with Opentrons OT-2 (https://opentrons.com/ot-2).  Modified for Amassian Research Group (https://www.mse.ncsu.edu/amassian/) by mtcarte4@ncsu.edu.  I have no plans to modify this version.
+
+
+
+
+
+
+
 # Python module for [Ocean Optics](http://www.oceanoptics.com/) spectrometers
 
 [![Conda (channel only)](https://img.shields.io/conda/vn/conda-forge/seabreeze?label=conda)](https://anaconda.org/conda-forge/seabreeze)
